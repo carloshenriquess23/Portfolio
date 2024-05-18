@@ -6,7 +6,7 @@ export default function CardCurso(props){
     const[mostrarDetalhesCurso,setMostrarDetalhesCurso]=useState(false);
     return(
 
-        <div className='card-curso'>
+        <div className='card-curso' style={mostrarDetalhesCurso ? {maxHeight:"500px"} : {maxHeight:"180px"}}>
 
             <h3>{props.curso}</h3>
             <p> <span>Status:</span> {props.status}</p>
@@ -14,8 +14,8 @@ export default function CardCurso(props){
 
             <button onClick={() => {setMostrarDetalhesCurso(!mostrarDetalhesCurso)}}>Ver mais sobre</button>
 
-            {mostrarDetalhesCurso && ( 
-                <p id='descricao' style={mostrarDetalhesCurso ? {zIndex:"0",opacity:"1"} : {zIndex:"-1",opacity:"0"}}> <span>Descrição:</span> {props.descricao}</p>)}
+            {mostrarDetalhesCurso && (
+                <p id='descricao'> <span>Descrição:</span> {props.descricao}</p>)}
         </div>
     );
 }

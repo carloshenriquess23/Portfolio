@@ -15,7 +15,7 @@ export default function Home(){
                 <div className='container-header'>
 
                     <div className='container-foto'>
-                        <img src='/assets/images/rosto.jpg '/>
+                        <img src='/assets/images/rosto.jpg' alt='minha foto'/>
                     </div>
 
                     <div className='container-header-mobile'>
@@ -39,7 +39,7 @@ export default function Home(){
 
                             <hr/>
 
-                            <a className='github'>
+                            <a className='github' href="https://github.com/carloshenriquess23" target="_blank" rel="noreferrer">
 
                                 <svg width="27" height="28" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="1" width="25" height="24" rx="12" fill="white"/>
@@ -49,7 +49,7 @@ export default function Home(){
                                 <span>Github</span>
                             </a>
 
-                            <a className='linkedin'>
+                            <a className='linkedin' href="https://www.linkedin.com/in/carlos-henrique-santos-silva-6912022a7/"  target="_blank" rel="noreferrer">
 
                                 <svg width="24" height="28" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="2" width="26" height="26" rx="5" fill="white"/>
@@ -78,34 +78,19 @@ export default function Home(){
                                 <h3>Todos os projetos:</h3>
                                 <p>Clique na seta do projeto para saber mais sobre</p>
                             </div>
-
-                            <div className='filtro'>
-                                <p>Filtrar</p>
-                                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.182589 1.25615C0.492 0.488199 1.14833 0 1.87497 0H22.1273C22.854 0 23.5103 0.488199 23.8197 1.25615C24.1291 2.0241 24.0354 2.92919 23.576 3.58744L15.0015 15.8473V22.8192C15.0015 23.4829 14.6827 24.0918 14.1717 24.388C13.6607 24.6842 13.056 24.6239 12.6012 24.2234L9.60088 21.5904C9.22115 21.2613 9.00081 20.7402 9.00081 20.1862V15.8473L0.421679 3.58195C-0.0330614 2.92919 -0.13151 2.01862 0.182589 1.25615Z" fill="#79735E"/>
-                                </svg>
-
-                                <select>
-
-                                    <option>javascript</option>
-                                    <option>ReactJS</option>
-                                    <option>HTML</option>
-                                    <option>CSS</option>
-                                    <option>MYSQL</option>
-                                </select>
-                            </div>
                         </header>
 
                         <hr/>
 
                         <div className='container-listagem-projetos'>
 
-                            <CardProjeto    link="exemploprojeto.com" 
+                            {/* <CardProjeto    link="exemploprojeto.com" 
                                             conhecimento1="/assets/images/conhecimentos/js.png"
                                             conhecimento2="/assets/images/conhecimentos/react.png"
                                             conhecimento3="/assets/images/conhecimentos/html-5.png"
                                             conhecimento4="/assets/images/conhecimentos/css-3.png"
-                                            conhecimento5="/assets/images/conhecimentos/mysql.png"/>
+                                            conhecimento5="/assets/images/conhecimentos/mysql.png"/> */}
+                            <p>Em breve irei lançar projetos aqui</p>
                         </div>
                     </section>
                 </div>

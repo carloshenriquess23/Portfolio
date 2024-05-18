@@ -1,14 +1,21 @@
+
+.expandido {
+    max-height: 500px !important; // Ajuste este valor conforme necessário
+    padding-bottom: 20px; // Ajuste o padding conforme necessário
+}
+
 .card-curso{
 
     display:flex;
     flex-direction: column;
 
     width:100%;
+    height:auto;
 
     padding:10px;
 
     background-color:#79735E;
-    transition:height 0.5s;
+    transition: max-height 0.5s;
 
     border-radius:10px;
     border:1px #000 solid;
@@ -47,15 +54,9 @@
         color:#79735E;
         font-size:16px;
     }
-
-    #descricao{
-
-        transition:opacity 1s;
-        transition:z-index 1s;
-    }
 }
 
-@media(max-width:680px){
+@media(max-width:768px){
 
     .card-curso{
 
@@ -77,3 +78,4 @@
         }
     }
 }
+
