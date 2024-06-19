@@ -5,7 +5,7 @@ export default function CardProjeto(props){
 
     const [ampliarImagem,setAmpliarImagem]=useState(false);
 
-    const [conhecimentosUsados,setConhecimentosUsados]=useState(props.conhecimentos);
+    const [conhecimentosUsados]=useState(props.conhecimentos);
 
     return(
 
