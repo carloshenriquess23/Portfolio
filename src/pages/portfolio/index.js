@@ -39,7 +39,7 @@ export default function Home(){
 
                             <hr/>
 
-                            <a className='github' href="https://github.com/carloshenriquess23" target="_blank" rel="noreferrer">
+                            <a className='github' href="https://github.com/carloshenriquess23">
 
                                 <svg width="27" height="28" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="1" width="25" height="24" rx="12" fill="white"/>
@@ -49,7 +49,7 @@ export default function Home(){
                                 <span>Github</span>
                             </a>
 
-                            <a className='linkedin' href="https://www.linkedin.com/in/carlos-henrique-santos-silva-6912022a7/"  target="_blank" rel="noreferrer">
+                            <a className='linkedin' href="https://www.linkedin.com/in/carlos-henrique-santos-silva-6912022a7/">
 
                                 <svg width="24" height="28" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="2" width="26" height="26" rx="5" fill="white"/>
@@ -84,26 +84,40 @@ export default function Home(){
 
                         <div className='container-listagem-projetos'>
 
-                            {/* <CardProjeto    link="exemploprojeto.com" 
-                                            conhecimento1="/assets/images/conhecimentos/js.png"
-                                            conhecimento2="/assets/images/conhecimentos/react.png"
-                                            conhecimento3="/assets/images/conhecimentos/html-5.png"
-                                            conhecimento4="/assets/images/conhecimentos/css-3.png"
-                                            conhecimento5="/assets/images/conhecimentos/mysql.png"/> */}
-                            <p>Em breve irei lançar projetos aqui</p>
+                            <CardProjeto    link="exemploprojeto.com" 
+                                            conhecimentos={["/assets/images/conhecimentos/js.png",
+                                                            "/assets/images/conhecimentos/react.png",
+                                                            "/assets/images/conhecimentos/html-5.png",
+                                                            "/assets/images/conhecimentos/css-3.png",
+                                                            "/assets/images/conhecimentos/express.png",
+                                                            "/assets/images/conhecimentos/axios.jpg"
+                                            ]}
+                                            descricao="Este projeto possui uma API feita com Express e Node.js para consumir a API TMDB com Axios. Essa API é consumida também com axios em um outro projeto React, com 3 páginas: inicial, pesquisa e informações do filme"
+                                            imagem="/assets/images/projetoTMDB/filmepg1.png"
+
+                                            protipagem="https://www.figma.com/design/boJFh6KzzcDkbMBsq746m4/Projeto-TMDB-Filmes?node-id=0-1&t=u02HdNdct7sX6Vsz-1"
+                                            textoProtipagem="Link do design projeto em Figma"
+                                            
+                                            repository1="https://github.com/carloshenriquess23/tmdb-filmes-api.git"
+                                            textoRepo1="Repository da API Express"
+
+                                            repository2="https://github.com/carloshenriquess23/tmdb-filmes-pagina.git"
+                                            textoRepo2="Repository Páginas React"/>
                         </div>
                     </section>
                 </div>
 
                 <div className='container-cursos-conhecimentos'>
 
-                    <h3>Linguagens e frameworks:</h3>
+                    <h3>Tecnologias:</h3>
 
                     <section className='conhecimentos'>
-                        <CardConhecimento logo='/assets/images/conhecimentos/react.png' nome='ReactJS'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/js.png' nome='javascript'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/html-5.png' nome='HTML'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/css-3.png' nome='CSS'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/react.png' nome='ReactJS'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/express.png' nome='Express'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/axios.jpg' nome='Axios'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/mysql.png' nome='MYSQL'/>
                     </section>
 

@@ -6,7 +6,7 @@ export default function CardConhecimento(props){
 
         <div className='card-conhecimento'>
 
-            <img src={props.logo}/>
+            <img src={props.logo} alt='logo linguagem'/>
 
             <p>{props.nome}</p>
         </div>

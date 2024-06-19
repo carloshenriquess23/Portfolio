@@ -3,32 +3,25 @@ import { useState} from 'react';
 
 export default function CardProjeto(props){
 
-    const [detalhesProjeto,setDetalhesProjeto]=useState(false);
-    const [mostrarBotao1,setMostrarBotao1]=useState(true);
-    const [mostrarBotao2,setMostrarBotao2]=useState(false);
+    const [ampliarImagem,setAmpliarImagem]=useState(false);
 
-    function mostrarDetalhes(){
-
-
-        setDetalhesProjeto(!detalhesProjeto);
-    }
-
-    function animarBotao(e){
-
-        e.style.animation="girarButton 0.5s";
-        e.disabled=true;
-    }
-
-    function terminarAnimacao(e){
-
-        setMostrarBotao1(!mostrarBotao1);
-        setMostrarBotao2(!mostrarBotao2);
-        e.style.animation = "none";
-    }
+    const [conhecimentosUsados,setConhecimentosUsados]=useState(props.conhecimentos);
 
     return(
 
-        <div className='card-projeto' style={detalhesProjeto ? {height:"200px"} : {height:"80px"}}>
+        <div className='card-projeto'>
+
+            {ampliarImagem && 
+                <div className='ampliar-imagem'>
+                    <img src={props.imagem} alt='imagem projeto'/>
+                    <button onClick={() => {setAmpliarImagem(false)}}>
+                        <svg width="50" height="54" viewBox="0 0 50 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M49.0342 6.32981C50.5054 4.69066 50.271 2.25604 48.5004 0.894096C46.7297 -0.467846 44.0997 -0.2509 42.6285 1.38825L25 20.9737L7.37147 1.38825C5.90026 -0.2509 3.2703 -0.467846 1.49963 0.894096C-0.27103 2.25604 -0.505382 4.69066 0.965832 6.32981L19.5708 27L0.965832 47.6702C-0.505382 49.3093 -0.27103 51.744 1.49963 53.1059C3.2703 54.4678 5.90026 54.2509 7.37147 52.6117L25 33.0263L42.6285 52.6117C44.0997 54.2509 46.7297 54.4678 48.5004 53.1059C50.271 51.744 50.5054 49.3093 49.0342 47.6702L30.4292 27L49.0342 6.32981Z" fill="white"/>
+                        </svg>
+
+                    </button>
+                </div>
+            }
 
             <div className='container-link-linguagens'>
 
@@ -36,36 +29,33 @@ export default function CardProjeto(props){
                     <a href={props.link}>{props.link}</a>
 
                     <div className='container-imagens'>
-                        <img src={props.conhecimento1} alt=''/>
-                        <img src={props.conhecimento2} alt=''/>
-                        <img src={props.conhecimento3} alt=''/>
-                        <img src={props.conhecimento4} alt=''/>
-                        <img src={props.conhecimento5} alt=''/>
+                        {conhecimentosUsados.map(item => 
+                            <img src={item} alt=''/>
+                        )}
                     </div>
                 </div>
-
-                {mostrarBotao1 && (
-                    <button onClick={(e) => {animarBotao(e.target);mostrarDetalhes()}} onAnimationEnd={(e) => {terminarAnimacao(e.target)}}>
-                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.44614 17.1214C10.3052 18.2929 11.7002 18.2929 12.5592 17.1214L21.3555 5.12612C21.9878 4.26396 22.1733 2.98009 21.8297 1.85553C21.4861 0.730965 20.6889 0 19.7956 0L2.20291 0.00937191C1.3164 0.00937191 0.512364 0.740337 0.168757 1.8649C-0.17485 2.98946 0.01757 4.27333 0.642934 5.13549L9.43927 17.1308L9.44614 17.1214Z" fill="white"/>
-                        </svg>
-                    </button>)}
-
-                {mostrarBotao2 && (
-                    <button onClick={(e) => {animarBotao(e.target);mostrarDetalhes()}} onAnimationEnd={(e) => {terminarAnimacao(e.target)}}>
-                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5539 0.878563C11.6948 -0.292854 10.2998 -0.292854 9.44078 0.878563L0.644453 12.8739C0.0122172 13.736 -0.17333 15.0199 0.170276 16.1445C0.513883 17.269 1.31105 18 2.20443 18H19.7971C20.6836 18 21.4876 17.269 21.8312 16.1445C22.1749 15.0199 21.9824 13.736 21.3571 12.8739L12.5607 0.878563H12.5539Z" fill="white"/>
-                        </svg>
-                    </button>)}
             </div>
 
-            <div className='container-detalhes-projeto' style={detalhesProjeto ? {zIndex:"0",opacity:"1"} : {zIndex:"-1",opacity:"0"}}>
+            <div className='container-detalhes-projeto'>
 
-                <figure className='frame-imagem'>
-                    <img/>
-                </figure>
+                <button className='button-imagem'  onClick={() => {setAmpliarImagem(true)}}>
+                    <img src={props.imagem} alt='imagem projeto'/>
+                </button>
 
-                <p>Projeto inspirado no site netflix</p>
+                <div className='container-desc-links'>
+                    <p>{props.descricao} </p> 
+                    {props.protipagem.length>0 && 
+                        <a href={props.protipagem}>{props.textoProtipagem}</a>
+                    }
+
+                    {props.repository1.length>0 &&
+                        <a href={props.repository1}>{props.textoRepo1}</a>  
+                    } 
+
+                    {props.repository2.length>0 && 
+                        <a href={props.repository2}>{props.textoRepo2}</a>   
+                    }  
+                </div>    
             </div>
         </div>
     );
