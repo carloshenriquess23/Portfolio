@@ -84,7 +84,7 @@ export default function Home(){
 
                         <div className='container-listagem-projetos'>
 
-                            <CardProjeto    link="https://tmdb-filmes-pagina-18plt9vye-carlos-projects-6c33deb2.vercel.app" 
+                            <CardProjeto    link="https://tmdb-filmes-pagina.vercel.app/" 
                                             conhecimentos={["/assets/images/conhecimentos/js.png",
                                                             "/assets/images/conhecimentos/react.png",
                                                             "/assets/images/conhecimentos/html-5.png",
