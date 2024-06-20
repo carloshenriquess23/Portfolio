@@ -84,7 +84,7 @@ export default function Home(){
 
                         <div className='container-listagem-projetos'>
 
-                            <CardProjeto    link="https://tmdb-filmes-pagina-mr5o89hqv-carlos-projects-6c33deb2.vercel.app" 
+                            <CardProjeto    link="https://tmdb-filmes-pagina-18plt9vye-carlos-projects-6c33deb2.vercel.app" 
                                             conhecimentos={["/assets/images/conhecimentos/js.png",
                                                             "/assets/images/conhecimentos/react.png",
                                                             "/assets/images/conhecimentos/html-5.png",
@@ -118,10 +118,13 @@ export default function Home(){
                         <CardConhecimento logo='/assets/images/conhecimentos/js.png' nome='javascript'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/html-5.png' nome='HTML'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/css-3.png' nome='CSS'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/sass.png' nome='SCSS'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/react.png' nome='ReactJS'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/express.png' nome='Express'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/axios.jpg' nome='Axios'/>
                         <CardConhecimento logo='/assets/images/conhecimentos/mysql.png' nome='MYSQL'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/figma.png' nome='Figma'/>
+                        <CardConhecimento logo='/assets/images/conhecimentos/visual-studio.jpg' nome='Visual Code'/>
                     </section>
 
                     <h3>Cursos complementares:</h3>
