@@ -12,7 +12,7 @@ export default function CardCurso(props){
             <p> <span>Status:</span> {props.status}</p>
             <p> <span>Instituição:</span> {props.instituicao}</p>
 
-            <button onClick={() => {setMostrarDetalhesCurso(!mostrarDetalhesCurso)}}>Ver mais sobre</button>
+            <button onClick={() => {setMostrarDetalhesCurso(!mostrarDetalhesCurso)}}>{mostrarDetalhesCurso ? "Ver menos" : "Ver mais sobre"}</button>
 
             {mostrarDetalhesCurso && (
                 <p id='descricao'> <span>Descrição:</span> {props.descricao}</p>)}

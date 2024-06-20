@@ -92,8 +92,11 @@ export default function Home(){
                                                             "/assets/images/conhecimentos/express.png",
                                                             "/assets/images/conhecimentos/axios.jpg"
                                             ]}
+                                            imagens={[  "/assets/images/projetoTMDB/filmepg1.png",
+                                                        "/assets/images/projetoTMDB/filmepg2.png",
+                                                        "/assets/images/projetoTMDB/filmepg3.png"]}
+                                                        
                                             descricao="Este projeto possui uma API feita com Express e Node.js para consumir a API TMDB com Axios. Essa API é consumida também com axios em um outro projeto React, com 3 páginas: inicial, pesquisa e informações do filme"
-                                            imagem="/assets/images/projetoTMDB/filmepg1.png"
 
                                             protipagem="https://www.figma.com/design/boJFh6KzzcDkbMBsq746m4/Projeto-TMDB-Filmes?node-id=0-1&t=u02HdNdct7sX6Vsz-1"
                                             textoProtipagem="Link do design projeto em Figma"
