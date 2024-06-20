@@ -46,7 +46,7 @@ export default function CardProjeto(props){
             <div className='container-link-linguagens'>
 
                 <div className='sub-container-link-linguagens'>
-                    <a href={props.link}>{props.link}</a>
+                    <a href={props.link}>Ver projeto</a>
 
                     <div className='container-imagens'>
                         {conhecimentosUsados.map(item => 
